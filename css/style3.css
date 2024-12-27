@@ -1,0 +1,33 @@
+body{
+    background-color: rgba(0, 0, 0, 0.253);
+}
+table{
+    border: 1px solid black;
+    width: 100%;
+}
+a[name=a]{
+    text-decoration: none;
+}
+#search{
+    width: 20%;
+    height: 20px;
+    padding: 10px;
+    margin: 10px;
+}
+button[type=search]{
+    width: 80px;
+    height: 40px;
+    padding: 10px;
+    margin: 10px;
+}
+.lr{
+    text-align: right;
+}
+button[type=submit]{
+    height: 40px;
+    padding: 10px;
+    margin: 10px;
+}
+a[name=hienthi]{
+    text-decoration: none;
+}

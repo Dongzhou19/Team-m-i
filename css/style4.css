@@ -1,0 +1,74 @@
+/* Tao giao dien cho ca phan body */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background: linear-gradient(to bottom, #727171, #33333350);
+}
+
+/* Theme cho phan chu de */
+h1{
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+}
+
+/* Theme cho phan bang*/
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table, th, td {
+    border: 3px solid #ccc;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+th {
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input{
+    width: 30%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+}
+button[type=submit]{
+    width: 100px;
+    height: 30px;
+    border-radius: 30px;
+}
+
+/* Can le giua cho TT, Dob, Gender, Home Town, Level, Group, Function */
+.btn.function{
+    text-align: center;
+}
+
+/* Thiet ke cho nut Add Student */
+.a{
+    padding: 8px 16px;
+    margin-right: 10px;
+    border: 1px solid black;
+    background-color: cadetblue;
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+}
+
