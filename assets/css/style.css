@@ -1,0 +1,30 @@
+body {
+  background-color: white;
+}
+header {
+}
+.container {
+  background-color: #7a4a01;
+  height: 50px;
+  width: 100%;
+  text-size-adjust: 18px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  color: white;
+  display: flex;
+}
+.dong-chu {
+  color: white;
+  ackground-color: transparent;
+  text-size-adjust: 19px;
+}
+.dong-chu:hover {
+  color: rgb(255, 0, 43);
+  background-color: transparent;
+  text-decoration: none;
+}
+.dong-chu:active {
+  color: yellow;
+  background-color: transparent;
+  text-decoration: underline;
+}
