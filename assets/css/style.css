@@ -1,30 +1,188 @@
 body {
   background-color: white;
 }
-header {
+.notification-bar {
+  background-color: #7a4d0b; /* Màu nền nâu */
+  color: white; /* Màu chữ trắng */
+  font-size: 16px; /* Kích thước chữ */
+  padding: 10px 20px; /* Khoảng cách bên trong */
+  display: flex; /* Sử dụng Flexbox */
+  align-items: center; /* Căn giữa theo chiều dọc */
+  justify-content: center; /* Căn giữa theo chiều ngang */
+  font-family: Arial, sans-serif; /* Font chữ */
+  text-align: center; /* Căn giữa nội dung */
+  position: relative; /* Đặt vị trí để căn chỉnh nút đóng */
 }
-.container {
-  background-color: #7a4a01;
-  height: 50px;
-  width: 100%;
-  text-size-adjust: 18px;
-  text-align: center;
+
+/* Văn bản thông báo */
+.notification-bar span {
+  margin-right: 10px;
+}
+
+/* Đường dẫn Đăng ký ngay */
+.notification-bar a {
+  color: white; /* Màu chữ trắng */
+  text-decoration: underline; /* Gạch chân */
+  font-weight: bold; /* Chữ đậm */
+}
+.notification-bar a:hover {
+  text-decoration: none; /* Bỏ gạch chân khi hover */
+}
+.close-btn {
+  font-size: 20px; /* Kích thước nút đóng */
+  font-weight: bold; /* Đậm */
+  color: black; /* Màu chữ nút đóng */
+  background: none; /* Không có nền */
+  border: none; /* Không có viền */
+  cursor: pointer; /* Con trỏ dạng tay khi hover */
+  position: absolute; /* Đặt vị trí tuyệt đối */
+  right: 20px; /* Cách lề phải 20px */
+  top: 50%; /* Căn giữa theo chiều dọc */
+  transform: translateY(-50%);
+}
+.close-btn:hover {
+  color: #fff; /* Đổi màu nút khi hover */
+}
+nav {
+  margin: 0;
   font-family: Arial, sans-serif;
-  color: white;
+  background-color: #000;
+}
+.navbar {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #000;
+  padding: 10px 20px;
+  border-bottom: 1px solid #fff;
 }
-.dong-chu {
-  color: white;
-  ackground-color: transparent;
-  text-size-adjust: 19px;
+
+.logo img {
+  width: 30px;
+  height: auto;
 }
-.dong-chu:hover {
-  color: rgb(255, 0, 43);
-  background-color: transparent;
+
+.tong {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links {
+  list-style-type: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+  place-items: center;
+}
+
+.nav-links li a {
+  color: #fff;
   text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
 }
-.dong-chu:active {
-  color: yellow;
-  background-color: transparent;
+
+.nav-links li a:hover {
   text-decoration: underline;
+}
+
+.search-cart {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.search-box {
+  padding: 5px;
+  border: none;
+  border-radius: 15px;
+  padding-left: 10px;
+}
+
+.search-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.search-button img {
+  width: 20px;
+  height: 20px;
+}
+
+.cart {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.cart img {
+  width: 20px;
+  height: auto;
+}
+.hero-section {
+  position: relative;
+  height: 100vh;
+  background: url("/assets/img/anh_trang_chu/nen.png") no-repeat center
+    center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+.hero-section::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3); /* Overlay màu tối */
+  z-index: 1;
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+}
+
+.content h3 {
+  font-size: 2.5rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.content h1 {
+  font-size: 6.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.content p {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+.cta-button {
+  display: inline-block;
+  background: white;
+  color: black;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  font-size: 2rem;
+  font-weight: bold;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.cta-button:hover {
+  background: black;
+  color: white;
 }
