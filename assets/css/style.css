@@ -1,5 +1,10 @@
-body {
-  background-color: white;
+
+html {
+  scroll-behavior: smooth;
+}
+body{
+  background-color: #111;
+  height:350vh;
 }
 .notification-bar {
   background-color: #7a4d0b; /* Màu nền nâu */
@@ -234,3 +239,8 @@ nav {
 .cta-button1:hover {
   background: black;
   color: white;
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
