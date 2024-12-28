@@ -186,3 +186,51 @@ nav {
   background: black;
   color: white;
 }
+.bk2 {
+  position: relative;
+  height: 100vh;
+  background: url("/assets/img/anh_trang_chu/bk2.jpg") no-repeat center
+    center/cover;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-family: Arial, sans-serif;
+  color: white;
+}
+.content2 {
+  position: absolute;
+  right: 0;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.content2 h1 {
+  margin: 0;
+  font-size: 2.4rem;
+  width: 80%;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+.content2 p {
+  margin: 1.2rem 0;
+  font-size: 1.4rem;
+  width: 80%;
+  line-height: 1.1;
+}
+.cta-button1 {
+  display: inline-block;
+  background: white;
+  color: black;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  font-size: 2rem;
+  font-weight: bold;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.cta-button1:hover {
+  background: black;
+  color: white;
