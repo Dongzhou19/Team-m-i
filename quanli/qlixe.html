@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Management</title>
+    <link rel="stylesheet" href="quanli.css">
+    <script src="quaanlixe.js" defer></script>
+</head>
+<body>
+    <h1>Car Management</h1>
+    
+    <!-- Car Management -->
+    <div id="carManagement" class="form-container">
+        <h2>Add New Car</h2>
+        <input type="text" id="carModel" placeholder="Car Model" />
+        <input type="text" id="carColor" placeholder="Car Color" />
+        <input type="number" id="carPrice" placeholder="Car Price" />
+        <button onclick="addCar()">Add Car</button>
+
+        <h2>Car List</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Model</th>
+                    <th>Color</th>
+                    <th>Price</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="carTable">
+                <!-- Car rows will be added here dynamically -->
+            </tbody>
+        </table>
+        <a href="index.html">
+            <button>Back to User Management</button>
+        </a>
+    </div>
+</body>
+</html>
