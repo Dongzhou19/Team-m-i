@@ -1,0 +1,188 @@
+html {
+  scroll-behavior: smooth;
+}
+.notification-bar {
+  background-color: #7a4d0b; /* Màu nền nâu */
+  color: white; /* Màu chữ trắng */
+  font-size: 16px; /* Kích thước chữ */
+  padding: 10px 20px; /* Khoảng cách bên trong */
+  display: flex; /* Sử dụng Flexbox */
+  align-items: center; /* Căn giữa theo chiều dọc */
+  justify-content: center; /* Căn giữa theo chiều ngang */
+  font-family: Arial, sans-serif; /* Font chữ */
+  text-align: center; /* Căn giữa nội dung */
+  position: relative; /* Đặt vị trí để căn chỉnh nút đóng */
+}
+
+/* Văn bản thông báo */
+.notification-bar span {
+  margin-right: 10px;
+}
+
+/* Đường dẫn Đăng ký ngay */
+.notification-bar a {
+  color: white; /* Màu chữ trắng */
+  text-decoration: underline; /* Gạch chân */
+  font-weight: bold; /* Chữ đậm */
+}
+.notification-bar a:hover {
+  text-decoration: none; /* Bỏ gạch chân khi hover */
+}
+.close-btn {
+  font-size: 20px; /* Kích thước nút đóng */
+  font-weight: bold; /* Đậm */
+  color: black; /* Màu chữ nút đóng */
+  background: none; /* Không có nền */
+  border: none; /* Không có viền */
+  cursor: pointer; /* Con trỏ dạng tay khi hover */
+  position: absolute; /* Đặt vị trí tuyệt đối */
+  right: 20px; /* Cách lề phải 20px */
+  top: 50%; /* Căn giữa theo chiều dọc */
+  transform: translateY(-50%);
+}
+.close-btn:hover {
+  color: #fff; /* Đổi màu nút khi hover */
+}
+nav {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #000;
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #000;
+  padding: 10px 20px;
+  border-bottom: 1px solid #fff;
+}
+
+.logo img {
+  width: 30px;
+  height: auto;
+}
+
+.tong {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links {
+  list-style-type: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+  place-items: center;
+}
+
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.nav-links li a:hover {
+  text-decoration: underline;
+}
+
+.search-cart {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.search-box {
+  padding: 5px;
+  border: none;
+  border-radius: 15px;
+  padding-left: 10px;
+}
+
+.search-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.search-button img {
+  width: 20px;
+  height: 20px;
+}
+.cart {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.cart img {
+  width: 20px;
+  height: auto;
+}
+.carousel-inner {
+  width: 100%;
+  height: 550px;
+}
+.moi {
+  background-color: #000;
+  color: #fff;
+  height: 160vh;
+}
+.fakeimg {
+  height: 200px;
+  background: #aaa;
+}
+.fakeimg img {
+  width: 100%;
+  height: 100%;
+}
+.footer {
+  background-color: #1c1c1c;
+  color: #fff;
+  padding: 40px 20px;
+  font-size: 14px;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #333;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 10px;
+}
+
+.footer-links ul li {
+  margin-bottom: 10px;
+  color: #ccc;
+}
+
+.footer-links ul li img.flag-icon {
+  width: 16px;
+  height: auto;
+  margin-left: 5px;
+  vertical-align: middle;
+}
+
+.footer-social {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.footer-social a img {
+  width: 24px;
+  height: auto;
+  transition: transform 0.3s;
+}
+
+.footer-social a img:hover {
+  transform: scale(1.2);
+}
