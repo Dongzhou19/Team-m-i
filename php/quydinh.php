@@ -15,7 +15,7 @@
         </div>
     </div>
     <div class="a">
-        <a href="index.php">Trang chủ</a><a>>> Quy định tại 9SShop</a> 
+        <a href="indexson.php">Trang chủ</a><a>>> Quy định tại 9SShop</a> 
     </div>
     <form action="">
         <div class="form">

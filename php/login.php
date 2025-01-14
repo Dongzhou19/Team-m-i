@@ -30,11 +30,36 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/style5.css">
     <link rel="icon" type="image/x-iocn" href="../images/favicon.ico">
 </head>
 <body>
-    <i style='font-size:40px' class='fas'><a href="index.php">&#xf015;</a></i>
+<header>
+      <nav class="navbar">
+        <div class="tong">
+        <div class="logo">
+            <a href="indexson.php">
+                <img src="../images/icon/logo.png" alt="Logo" />
+            </a>
+          </div>
+          <ul class="nav-links">
+          <li><a href="information.php">Thông tin</a></li>
+              <li><a href="https://luxuo.vn/motoring/nhung-dac-quyen-duy-nhat-chi-co-tai-trung-tam-dich-vu-rolls-royce-vietnam.html">Quyền lợi</a></li>
+              <li><a href="danhgia.php">Đánh giá</a></li>
+              <li><a href="thongtinxe.php">Danh sách</a></li>
+          </ul>
+        </div>
+        <div class="search-cart">
+
+          <button class="search-button">
+            <img src="../images/icon/timkiem.png" alt="Search" />
+          </button>
+          <button class="cart">
+            <img src="../images/icon/gio_hang.png" alt="Cart" />
+          </button>
+        </div>
+      </nav>
+</header>
     <div class="wrapper">
         <form action="login.php" method="POST">
             <h2>

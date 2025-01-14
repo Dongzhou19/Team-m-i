@@ -1,11 +1,7 @@
-<?php 
+<?php
 require 'db.php';
 
 session_start();
-if(!isset($_SESSION['user_id'])){
-    header('Location: login.php');
-    exit;
-}
 ?>
 
 <!DOCTYPE html>
@@ -20,6 +16,14 @@ if(!isset($_SESSION['user_id'])){
   </head>
   <body>
   <header>
+        <div class="notification-bar">
+          <span>
+            Đăng kí để có cơ hội trở thành thành viên vip nhận lại hàng ngàn ưu
+            đãi!
+            <a href="login.php">Đăng nhập ngay</a>
+          </span>
+          <button class="close-btn">&times;</button>
+        </div>
       <nav class="navbar">
           <div class="tong">
             <div class="logo">
@@ -43,18 +47,17 @@ if(!isset($_SESSION['user_id'])){
           </form>
          <div class="search-cart">
             <button class="cart">
-              <a href="order1.php">
+              <a href="order.php">
                 <img src="../images/icon/gio_hang.png" alt="Cart" />
               </a> 
             </button>
           </div>
           <div class="search-cart">
-            <button class="lo">
-                <a  href='logout.php'>
-                    <img src="../images/icon/logout.png" alt="longout">
-                </a>
+            <button class="cart">
+              <a href="login.php">
+                <img src="../images/icon/login.png" alt="Login">
+              </a>
             </button>
-          
           </div>
         </div>
       </nav>
@@ -67,13 +70,12 @@ if(!isset($_SESSION['user_id'])){
           <h3>ROLLS ROYCE XIN GIỚI THIỆU</h3>
           <h1>PHẤN ĐẤU ĐẾN SỰ HOÀN HẢO</h1>
           <p>1 LOẠT BÀI VIẾT VĨ ĐẠI TRUYỀN CẢM HỨNG</p>
-          <a href="https://unionsquare.vn/vi/inspiring-greatness-from-rolls-royce/" class="cta-button">XEM NGAY</a>
+          <a href="#" class="cta-button">XEM NGAY</a>
         </div>
       </div>
       <div class="bk2">
         <div class="content2">
-          <h1>HOÀN HẢO TRONG TỪNG</h1>
-           <h1>TRẢI NGHIỆM CỦA KHÁCH HÀNG</h1>
+          <h1>HOÀN HẢO TRONG TỪNG TRẢI NGHIỆM CỦA KHÁCH HÀNG</h1>
           <p>
             Tận tụy mang đến cho khách hàng những trải nghiệm vô song và được
             thiết kế riêng, Rolls-Royce Motor Cars Abu Dhabi rất vui mừng thông
@@ -83,7 +85,7 @@ if(!isset($_SESSION['user_id'])){
             hàng trải nghiệm thương hiệu hoàn toàn đắm chìm trong khi vẫn đề cao
             nghệ thuật thủ công Bespoke.
           </p>
-          <a href="https://www.zigwheels.ae/car-news/rolls-royce-opens-new-luxury-showroom-in-abu-dhabi" class="cta-button1">XEM NGAY</a>
+          <a href="#" class="cta-button1">XEM NGAY</a>
         </div>
       </div>
       <div class="banhang">
@@ -106,7 +108,7 @@ if(!isset($_SESSION['user_id'])){
           </a>
         </div>
         <div class="card">
-          <a href="ghostblack.php" target="_blank">
+          <a href="ghostblack.php " target="_blank">
             <img src="../images/anh_trang_chu/bbg.png" alt="Black Badge Ghost Series II" />
             <h3>BLACK BADGE GHOST SERIES II</h3>
             <p>Táo bạo. Không ngại ngừng. Mạnh mẽ. Một biểu hiện táo bạo của sự sang trọng và quyền lực.</p>

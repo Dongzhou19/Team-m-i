@@ -1,0 +1,145 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: rgb(9, 8, 8);
+}
+
+h2 {
+    font-size: 40px;
+    text-align: center;
+    color: white;
+}
+
+#review-section {
+    max-width: 600px;
+    margin: auto;
+}
+
+#review-form {
+    margin-bottom: 20px;
+}
+
+.rating {
+    direction: row-reverse;
+    justify-content: flex-end;
+    cursor: pointer;
+    margin: 10px 0;
+}
+
+.rating span {
+    font-size: 30px;
+    color: #ccc;
+    transition: color 0.2s;
+}
+
+.rating span:hover,
+.rating span:hover ~ span {
+    color: gold;
+}
+
+textarea, input[type="text"] {
+    width: 100%;
+    height: 40px;
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+textarea {
+    height: 60px;
+}
+
+button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.review {
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background: #f9f9f9;
+}
+
+.review .stars {
+    color: gold;
+}
+
+.review .content {
+    margin-top: 5px;
+}
+
+.review .reviewer {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.reply-btn {
+    margin-top: 10px;
+    color: #007bff;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.reply-btn:hover {
+    text-decoration: underline;
+}
+
+.reply-form {
+    margin-top: 10px;
+    padding-left: 20px;
+    border-left: 2px solid #ccc;
+}
+
+.reply-form input,
+.reply-form textarea {
+    width: 100%;
+    margin: 5px 0;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.reply {
+    margin-top: 10px;
+    padding: 8px;
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.reply .replyer {
+    font-weight: bold;
+}
+
+.reply .reply-content {
+    margin: 5px 0;
+}
+
+.replies-container {
+    margin-top: 10px;
+    padding-left: 20px;
+    border-left: 2px solid #ccc;
+}
+
+.header {
+    text-align: center;
+    padding: 5px;
+    background: #383535;
+    border-bottom: 3px solid gold;
+}
+
+.logo img {
+    width: 30px;
+    height: auto;
+}

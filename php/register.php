@@ -43,11 +43,38 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/style5.css">
     <link rel="icon" type="images/x-iocn" href="../images/favicon.ico">
 </head>
 <body>
-    <i style='font-size:40px' class='fas'><a href="index.php">&#xf015;</a></i>
+<header>
+    <header>
+      <nav class="navbar">
+        <div class="tong">
+        <div class="logo">
+            <a href="indexson.php">
+                <img src="../images/icon/logo.png" alt="Logo" />
+            </a>
+          </div>
+          <ul class="nav-links">
+          <li><a href="information.php">Thông tin</a></li>
+              <li><a href="https://luxuo.vn/motoring/nhung-dac-quyen-duy-nhat-chi-co-tai-trung-tam-dich-vu-rolls-royce-vietnam.html">Quyền lợi</a></li>
+              <li><a href="danhgia.php">Đánh giá</a></li>
+              <li><a href="thongtinxe.php">Danh sách</a></li>
+          </ul>
+        </div>
+        <div class="search-cart">
+
+          <button class="search-button">
+            <img src="../images/icon/timkiem.png" alt="Search" />
+          </button>
+          <button class="cart">
+            <img src="../images/icon/gio_hang.png" alt="Cart" />
+          </button>
+        </div>
+      </nav>
+    </header>
+</header>
     <div class="wrapper">
         <form action='register.php' method='POST'>
             <h2>
@@ -66,7 +93,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
                 <label for='confirm_password'></label>
             </div></br>
             <div>
-                <input type="checkbox">Tôi đồng ý với <a href="quydinh.php">điều khoản</a> và Các <a href="quydinh.php">quy định</a> của Web </br>
+                <input type="checkbox" > Tôi đồng ý với <a href="quydinh.php">điều khoản</a> và Các <a href="quydinh.php">quy định</a> của Web </br>
             </div></br>
             <button type="submit"><a href="login.php">Register</a></button></br>
        

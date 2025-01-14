@@ -1,52 +1,168 @@
-
-html {
-  scroll-behavior: smooth;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
 }
 body{
-  background-color: #111;
-  height:350vh;
-}
-.notification-bar {
-  background-color: #7a4d0b; /* Màu nền nâu */
-  color: white; /* Màu chữ trắng */
-  font-size: 16px; /* Kích thước chữ */
-  padding: 10px 20px; /* Khoảng cách bên trong */
-  display: flex; /* Sử dụng Flexbox */
-  align-items: center; /* Căn giữa theo chiều dọc */
-  justify-content: center; /* Căn giữa theo chiều ngang */
-  font-family: Arial, sans-serif; /* Font chữ */
-  text-align: center; /* Căn giữa nội dung */
-  position: relative; /* Đặt vị trí để căn chỉnh nút đóng */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100%;
+    padding: 0 10px;
+    background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+    
 }
 
-/* Văn bản thông báo */
-.notification-bar span {
-  margin-right: 10px;
+body::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url("https://wallpapercave.com/wp/wp3653982.jpg");
+    background-position: center;
+    background-size: cover;
+    z-index: -1;
+}
+.wrapper{
+    width: 400px;
+    border-radius: 15px;
+    padding: 40px;
+    text-align: left;
+    background: rgba(255, 252, 252, 0.178);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    box-shadow: 0 8px 32px rgba(250, 249, 249, 0.37);
+    transition: all 0.3s ease;
+}
+.wrapper:hover{
+    box-shadow: 0 12px 48px rgba(250, 247, 247, 0.5);
+}
+form{
+    display: flex;
+    flex-direction: column;
+}
+h2{
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 25px;
+    color: #ffffff;
+    letter-spacing: 1px;
+
 }
 
-/* Đường dẫn Đăng ký ngay */
-.notification-bar a {
-  color: white; /* Màu chữ trắng */
-  text-decoration: underline; /* Gạch chân */
-  font-weight: bold; /* Chữ đậm */
+button{
+    background-color: #271930;
+    color: #ffffff;
+    font-weight: 600;
+    border: none;
+    padding: 15px 20px;
+    cursor: pointer;
+    border-radius: 25px;
+    font-size: 16px;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
 }
-.notification-bar a:hover {
-  text-decoration: none; /* Bỏ gạch chân khi hover */
+
+.register{
+    text-align: center;
+    margin-top: 30px;
+    color: #ffffff;
 }
-.close-btn {
-  font-size: 20px; /* Kích thước nút đóng */
-  font-weight: bold; /* Đậm */
-  color: black; /* Màu chữ nút đóng */
-  background: none; /* Không có nền */
-  border: none; /* Không có viền */
-  cursor: pointer; /* Con trỏ dạng tay khi hover */
-  position: absolute; /* Đặt vị trí tuyệt đối */
-  right: 20px; /* Cách lề phải 20px */
-  top: 50%; /* Căn giữa theo chiều dọc */
-  transform: translateY(-50%);
+.input-field{
+    position: relative;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+    margin: 20px 0;
 }
-.close-btn:hover {
-  color: #fff; /* Đổi màu nút khi hover */
+
+.input-field input{
+    width: 100%;
+    height: 40px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: #ffffff;
+    padding: 0 10px;
+}
+
+.forget{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 25px 0 35px 0;
+    color: #ffffff;
+}
+#remember{
+    accent-color: #ffdde1;
+}
+.forget label{
+    display: flex;
+    align-items: center;
+}
+
+.forget label p{
+    margin-left: 8px;
+}
+.wrapper a{
+    color: #ffdde1;
+    text-decoration: none;
+}
+button[name=k]{
+    border: 2px solid white;
+    background-color: aliceblue;
+    margin: 10px;
+    height: 50px;
+}
+a.a{
+    
+    color: #000000;
+    text-decoration: none;
+    text-align: center;
+}
+.h2{
+    text-align: center;
+}
+label[for=car]{
+    color: #0a0a0a;
+}
+
+input[type=text]{
+    color: #ffffff;
+    width: 100%;
+    height: 50px;
+    background-color: rgba(247, 247, 247, 0.137);
+}
+input[type=number]{
+    color: #ffffff;
+    width: 100%;
+    height: 50px;
+    background-color: rgba(247, 247, 247, 0.137);
+}
+.or{
+    text-align: center;
+}
+.k{
+    text-align: center;   
+}
+input[type=checkbox]{
+  color: #fff;
+}
+
+
+/* ******************************************************************************************************************************************** */
+
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Giúp header luôn nằm trên các phần tử khác */
+  background-color: #fff; /* Đặt màu nền cho header nếu cần */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Hiệu ứng đổ bóng */
 }
 nav {
   margin: 0;
@@ -245,110 +361,4 @@ nav {
     margin: 0 auto;
     padding: 20px;
   }
-}
-
-.explore-section {
-  text-align: center;
-  color: #fff;
-  background-color: #1c1c1c;
-  padding: 40px 20px;
-}
-
-.explore-section h2 {
-  font-size: 28px;
-  margin-bottom: 10px;
-}
-
-.explore-section p {
-  font-size: 16px;
-  margin-bottom: 40px;
-  color: #ccc;
-}
-
-.explore-cards {
-  display: flex;
-  padding: 50px;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
-
-.card {
-  background-color: #2a2a2a;
-  border-radius: 8px;
-  overflow: hidden;
-  max-width: 400px;
-  text-align: left;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.card img {
-  width: 100%;
-  height: auto;
-}
-.card:hover {
-  transform: scale(1.05);
-}
-.card a {
-  text-decoration: none;
-  color: inherit;
-}
-.card h3 {
-  font-size: 18px;
-  margin: 16px 12px 8px;
-  color: #fff;
-}
-
-.card p {
-  font-size: 14px;
-  margin: 0 12px 16px;
-  color: #ccc;
-}
-.footer {
-  background-color: #1c1c1c;
-  color: #fff;
-  padding: 40px 20px;
-  font-size: 14px;
-}
-
-.footer-links {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  border-bottom: 1px solid #333;
-  padding-bottom: 20px;
-  margin-bottom: 20px;
-}
-
-.footer-links ul {
-  list-style: none;
-  padding: 0;
-  margin: 0 10px;
-}
-
-.footer-links ul li {
-  margin-bottom: 10px;
-  color: #ccc;
-}
-
-.footer-links ul li img.flag-icon {
-  width: 16px;
-  height: auto;
-  margin-left: 5px;
-  vertical-align: middle;
-}
-
-.footer-social {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-}
-
-.footer-social a img {
-  width: 24px;
-  height: auto;
-  transition: transform 0.3s;
-}
-
-.footer-social a img:hover {
-  transform: scale(1.2);
 }
