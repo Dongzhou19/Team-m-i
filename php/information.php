@@ -48,7 +48,7 @@ if(!isset($_SESSION['user_id'])){
           </form>
          <div class="search-cart">
             <button class="cart">
-              <a href="order1.php">
+              <a href="order.php">
                 <img src="../images/icon/gio_hang.png" alt="Cart" />
               </a> 
             </button>
