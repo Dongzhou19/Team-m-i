@@ -40,30 +40,36 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $sql = "INSERT INTO order_car (user_id, car_id, tonggia) VALUES (?, ?, ?)";
     $stmt = $conn->prepare($sql);
-    if (!$stmt->execute()) {
-        die("Truy vấn lỗi: " . $stmt->error);
+    if (!$stmt) {
+        die("Truy vấn lỗi: " . $conn->error);
     }
-    $stmt->bind_param("iid", $user_id, $car_id, $tonggia); // Bind tham số với đúng kiểu dữ liệu
-
+    
+    // Bind tham số với đúng kiểu dữ liệu
+    $stmt->bind_param("iid", $user_id, $car_id, $tonggia);
+    
     if ($stmt->execute()) {
         // Cập nhật trạng thái xe sau khi đặt
         $sql_update = "UPDATE car SET available = FALSE WHERE id = ?";
         $stmt_update = $conn->prepare($sql_update);
-        if ($stmt_update) {
+        if (!$stmt_update) {
             die("Truy vấn lỗi khi cập nhật trạng thái xe: " . $conn->error);
-        } 
-            $stmt_update->bind_param("i", $car_id);
-            if ($stmt_update->execute()) {
-                echo "Hoàn tất! Đặt xe thành công <a href='search.php'>Quay lại</a>";
-            } else{
-                echo "Đặt xe thành công nhưng không thể cập nhật trạng thái xe: " . $stmt_update->error;
-            }
+        }
+        $stmt_update->bind_param("i", $car_id);
+        if ($stmt_update->execute()) {
+
+            // Lưu thông báo thành công vào session
+            $_SESSION['order_success'] = "Đặt hàng thành công! Xe đã được đặt.";
+            header("Location: order.php"); // Chuyển hướng về trang đặt hàng
             exit;
         } else {
+            echo "Đặt xe thành công nhưng không thể cập nhật trạng thái xe: " . $stmt_update->error;
+        }
+    } else {
         echo "Đặt xe thất bại! Lỗi: " . $stmt->error;
     }
 }
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -119,7 +125,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
           </form>
          <div class="search-cart">
             <button class="cart">
-              <a href="order1.php">
+              <a href="order.php">
                 <img src="../images/icon/gio_hang.png" alt="Cart" />
               </a> 
             </button>
